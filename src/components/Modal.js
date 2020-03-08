@@ -15,7 +15,7 @@ class AttributeModal extends Component {
         }
     }
     checkIfChecked=(e)=> {
-        let selectedAttributes = this.state.selectedAttributes;
+        let selectedAttributes = [...this.state.selectedAttributes];
         if (e.target.checked) {
             let selectedAttribute = e.target.attributes.id.value;
             selectedAttributes.push(selectedAttribute);
